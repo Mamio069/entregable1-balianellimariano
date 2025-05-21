@@ -15,7 +15,7 @@ var Golosinas = [
     categia: "Golosinas",
     marca: "Halls",
     precio: 100,
-    stock: 10,
+    stock: 0,
     descripcion: "Pastillas de fruta",
   },
   {

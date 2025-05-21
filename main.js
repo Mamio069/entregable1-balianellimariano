@@ -3,6 +3,7 @@ const categoria = prompt(
   "Ingrese una categoría: Bebidas, Golosinas o Libreria"
 );
 
+// función para filtrar artículos por categoría
 function filtrarPorCategoria(categoria) {
   return articulos.filter((articulo) => articulo.categoria === categoria);
 }
@@ -10,6 +11,22 @@ function filtrarPorCategoria(categoria) {
 console.log("Bebidas:", filtrarPorCategoria("Bebidas"));
 console.log("Golosinas:", filtrarPorCategoria("Golosinas"));
 console.log("Libreria:", filtrarPorCategoria("Libreria"));
+
+// función para mostrar artículos disponibles
+function mostrarArticulosDisponibles(articulos) {
+  return articulos.filter((articulo) => articulo.stock > 0);
+}
+console.log("Articulos Disponibles:", mostrarArticulosDisponibles(articulos));
+
+// función para filtrar artículos por precio
+function filtrarPorPrecio(articulos) {
+  return articulos.filter((articulo) => articulo.precio > 150);
+}
+console.log("Articulos con precio mayor a $150:", filtrarPorPrecio(articulos));
+
+// funcion que filtra por categoria con respecto a la seleccion del usuario
+// y muestra los artículos disponibles en esa categoría
+// ademas de la opción de seleccionar uno
 
 const articulosFiltrados = filtrarPorCategoria(categoria);
 
@@ -54,5 +71,9 @@ if (articulosFiltrados.length > 0) {
     }
   }
 } else {
-  alert(`No se encontraron artículos para la categoría: ${categoria}`);
+  if (categoria === null) {
+    alert("Selección cancelada.");
+  } else {
+    alert(`No se encontraron artículos para la categoría: ${categoria}`);
+  }
 }
