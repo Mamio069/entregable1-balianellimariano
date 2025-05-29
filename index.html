@@ -6,13 +6,48 @@
     <title>Kiosco Wadito</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="bg-light text-dark">
     <script type="module" src="./main.js"></script>
 
-    <div class="container">
-      <h1>Kiosco WADITO</h1>
-      <p>El sistema del Kiosco</p>
+    <div class="container py-5">
+      <div class="text-center border rounded p-4 shadow-sm bg-white mb-4">
+        <h1 class="display-4 text-primary mb-3">Kiosco WADITO</h1>
+        <p class="lead">
+          Bienvenido al sistema del Kiosco WADITO, una solución intuitiva y
+          eficiente para la gestión diaria de ventas, productos y stock.
+          Diseñado para facilitar tu trabajo con una interfaz clara, moderna y
+          confiable.
+        </p>
+      </div>
+
+      <div class="border rounded p-4 bg-white shadow-sm">
+        <h2 class="h4 text-secondary mb-3">¿Qué hace el sistema?</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            Filtra productos por categoría:
+            <strong>Bebidas, Golosinas o Librería</strong>, permitiendo al
+            usuario explorar fácilmente los artículos disponibles.
+          </li>
+          <li class="list-group-item">
+            Muestra solo los productos en stock, evitando confusiones y
+            mejorando la gestión del inventario.
+          </li>
+          <li class="list-group-item">
+            Permite identificar artículos con precios superiores a
+            <strong>$150</strong>, útil para promociones o ventas destacadas.
+          </li>
+          <li class="list-group-item">
+            Presenta al usuario una lista interactiva según su selección de
+            categoría, donde puede ver detalles como
+            <strong>nombre, precio, marca y descripción</strong> de cada
+            producto.
+          </li>
+          <li class="list-group-item">
+            Solicita confirmación antes de realizar una selección definitiva,
+            asegurando una experiencia clara y sin errores.
+          </li>
+        </ul>
+      </div>
     </div>
-    
   </body>
 </html>
